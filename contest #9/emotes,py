@@ -1,0 +1,8 @@
+n,m,k = [int(x) for x in input().split()]
+emots = [int(x) for x in input().split()]
+emots.sort()
+count = m//(k+1)
+ans = count*k*emots[-1]
+ans += count*emots[-2]
+ans+= (m - count*(k+1))*emots[-1]
+print(ans)
